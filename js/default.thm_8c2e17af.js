@@ -10,7 +10,7 @@ window.skins=window.skins||{};
                 window.generateEUI = window.generateEUI||{};
                 generateEUI.paths = generateEUI.paths||{};
                 generateEUI.styles = undefined;
-                generateEUI.skins = {"eui.Button":"resource/eui_skins/ButtonSkin.exml","eui.CheckBox":"resource/eui_skins/CheckBoxSkin.exml","eui.HScrollBar":"resource/eui_skins/HScrollBarSkin.exml","eui.HSlider":"resource/eui_skins/HSliderSkin.exml","eui.Panel":"resource/eui_skins/PanelSkin.exml","eui.TextInput":"resource/eui_skins/TextInputSkin.exml","eui.ProgressBar":"resource/eui_skins/ProgressBarSkin.exml","eui.RadioButton":"resource/eui_skins/RadioButtonSkin.exml","eui.Scroller":"resource/eui_skins/ScrollerSkin.exml","eui.ToggleSwitch":"resource/eui_skins/ToggleSwitchSkin.exml","eui.VScrollBar":"resource/eui_skins/VScrollBarSkin.exml","eui.VSlider":"resource/eui_skins/VSliderSkin.exml","eui.ItemRenderer":"resource/eui_skins/ItemRendererSkin.exml"};generateEUI.paths['resource/eui_skins/ButtonSkin.exml'] = window.skins.ButtonSkin = (function (_super) {
+                generateEUI.skins = {"eui.Button":"resource/eui_skins/ButtonSkin.exml","eui.CheckBox":"resource/eui_skins/CheckBoxSkin.exml","eui.HScrollBar":"resource/eui_skins/HScrollBarSkin.exml","eui.HSlider":"resource/eui_skins/HSliderSkin.exml","eui.Panel":"resource/eui_skins/PanelSkin.exml","eui.TextInput":"resource/eui_skins/TextInputSkin.exml","eui.ProgressBar":"resource/eui_skins/ProgressBarSkin.exml","eui.RadioButton":"resource/eui_skins/RadioButtonSkin.exml","eui.Scroller":"resource/eui_skins/ScrollerSkin.exml","eui.ToggleSwitch":"resource/eui_skins/ToggleSwitchSkin.exml","eui.VScrollBar":"resource/eui_skins/VScrollBarSkin.exml","eui.VSlider":"resource/eui_skins/VSliderSkin.exml","eui.ItemRenderer":"resource/eui_skins/ItemRendererSkin.exml","StartPanel":"resource/eui_skins/StartPanelSkin.exml"};generateEUI.paths['resource/eui_skins/ButtonSkin.exml'] = window.skins.ButtonSkin = (function (_super) {
 	__extends(ButtonSkin, _super);
 	function ButtonSkin() {
 		_super.call(this);
@@ -448,6 +448,98 @@ window.skins=window.skins||{};
 		return t;
 	};
 	return ScrollerSkin;
+})(eui.Skin);generateEUI.paths['resource/eui_skins/StartPanelSkin.exml'] = window.StartPanelSkin = (function (_super) {
+	__extends(StartPanelSkin, _super);
+	function StartPanelSkin() {
+		_super.call(this);
+		this.skinParts = ["labelAnim","pswdTextInput","confirmButton","label"];
+		
+		this.height = 300;
+		this.width = 400;
+		this.labelAnim_i();
+		this.elementsContent = [this.pswdTextInput_i(),this.confirmButton_i(),this.label_i()];
+		
+		eui.Binding.$bindProperties(this, ["label"],[0],this._TweenItem1,"target");
+		eui.Binding.$bindProperties(this, [1],[],this._Object1,"alpha");
+		eui.Binding.$bindProperties(this, [0.3],[],this._Object2,"alpha");
+		eui.Binding.$bindProperties(this, [1],[],this._Object3,"alpha");
+	}
+	var _proto = StartPanelSkin.prototype;
+
+	_proto.labelAnim_i = function () {
+		var t = new egret.tween.TweenGroup();
+		this.labelAnim = t;
+		t.items = [this._TweenItem1_i()];
+		return t;
+	};
+	_proto._TweenItem1_i = function () {
+		var t = new egret.tween.TweenItem();
+		this._TweenItem1 = t;
+		t.paths = [this._Set1_i(),this._To1_i(),this._To2_i()];
+		return t;
+	};
+	_proto._Set1_i = function () {
+		var t = new egret.tween.Set();
+		t.props = this._Object1_i();
+		return t;
+	};
+	_proto._Object1_i = function () {
+		var t = {};
+		this._Object1 = t;
+		return t;
+	};
+	_proto._To1_i = function () {
+		var t = new egret.tween.To();
+		t.duration = 500;
+		t.ease = "quadIn";
+		t.props = this._Object2_i();
+		return t;
+	};
+	_proto._Object2_i = function () {
+		var t = {};
+		this._Object2 = t;
+		return t;
+	};
+	_proto._To2_i = function () {
+		var t = new egret.tween.To();
+		t.duration = 500;
+		t.ease = "quadIn";
+		t.props = this._Object3_i();
+		return t;
+	};
+	_proto._Object3_i = function () {
+		var t = {};
+		this._Object3 = t;
+		return t;
+	};
+	_proto.pswdTextInput_i = function () {
+		var t = new eui.TextInput();
+		this.pswdTextInput = t;
+		t.height = 40;
+		t.horizontalCenter = 0;
+		t.verticalCenter = 0;
+		t.width = 300;
+		return t;
+	};
+	_proto.confirmButton_i = function () {
+		var t = new eui.Button();
+		this.confirmButton = t;
+		t.height = 80;
+		t.horizontalCenter = 0;
+		t.label = "确认";
+		t.verticalCenter = 100;
+		t.width = 160;
+		return t;
+	};
+	_proto.label_i = function () {
+		var t = new eui.Label();
+		this.label = t;
+		t.horizontalCenter = -80;
+		t.text = "请输入密码";
+		t.verticalCenter = -42;
+		return t;
+	};
+	return StartPanelSkin;
 })(eui.Skin);generateEUI.paths['resource/eui_skins/TextInputSkin.exml'] = window.skins.TextInputSkin = (function (_super) {
 	__extends(TextInputSkin, _super);
 	function TextInputSkin() {
