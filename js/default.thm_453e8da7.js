@@ -515,28 +515,30 @@ window.skins=window.skins||{};
 	_proto.pswdTextInput_i = function () {
 		var t = new eui.TextInput();
 		this.pswdTextInput = t;
-		t.height = 40;
+		t.height = 70;
 		t.horizontalCenter = 0;
 		t.verticalCenter = 0;
-		t.width = 300;
+		t.width = 400;
 		return t;
 	};
 	_proto.confirmButton_i = function () {
 		var t = new eui.Button();
 		this.confirmButton = t;
 		t.height = 80;
-		t.horizontalCenter = 0;
+		t.horizontalCenter = 120;
 		t.label = "确认";
-		t.verticalCenter = 100;
+		t.verticalCenter = 125;
 		t.width = 160;
 		return t;
 	};
 	_proto.label_i = function () {
 		var t = new eui.Label();
 		this.label = t;
-		t.horizontalCenter = -80;
+		t.fontFamily = "Microsoft YaHei";
+		t.horizontalCenter = 0;
 		t.text = "请输入密码";
-		t.verticalCenter = -42;
+		t.textColor = 0xFF4500;
+		t.verticalCenter = -100;
 		return t;
 	};
 	return StartPanelSkin;
