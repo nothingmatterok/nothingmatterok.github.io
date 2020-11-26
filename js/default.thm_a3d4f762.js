@@ -10,7 +10,7 @@ window.skins=window.skins||{};
                 window.generateEUI = window.generateEUI||{};
                 generateEUI.paths = generateEUI.paths||{};
                 generateEUI.styles = undefined;
-                generateEUI.skins = {"eui.Button":"resource/eui_skins/ButtonSkin.exml","eui.CheckBox":"resource/eui_skins/CheckBoxSkin.exml","eui.HScrollBar":"resource/eui_skins/HScrollBarSkin.exml","eui.HSlider":"resource/eui_skins/HSliderSkin.exml","eui.Panel":"resource/eui_skins/PanelSkin.exml","eui.TextInput":"resource/eui_skins/TextInputSkin.exml","eui.ProgressBar":"resource/eui_skins/ProgressBarSkin.exml","eui.RadioButton":"resource/eui_skins/RadioButtonSkin.exml","eui.Scroller":"resource/eui_skins/ScrollerSkin.exml","eui.ToggleSwitch":"resource/eui_skins/ToggleSwitchSkin.exml","eui.VScrollBar":"resource/eui_skins/VScrollBarSkin.exml","eui.VSlider":"resource/eui_skins/VSliderSkin.exml","eui.ItemRenderer":"resource/eui_skins/ItemRendererSkin.exml","StartPanel":"resource/eui_skins/StartPanelSkin.exml","MainUI":"resource/eui_skins/MainUISkin.exml","L1MainUI":"resource/eui_skins/L1MainUISkin.exml"};generateEUI.paths['resource/eui_skins/ButtonSkin.exml'] = window.skins.ButtonSkin = (function (_super) {
+                generateEUI.skins = {"eui.Button":"resource/eui_skins/ButtonSkin.exml","eui.CheckBox":"resource/eui_skins/CheckBoxSkin.exml","eui.HScrollBar":"resource/eui_skins/HScrollBarSkin.exml","eui.HSlider":"resource/eui_skins/HSliderSkin.exml","eui.Panel":"resource/eui_skins/PanelSkin.exml","eui.TextInput":"resource/eui_skins/TextInputSkin.exml","eui.ProgressBar":"resource/eui_skins/ProgressBarSkin.exml","eui.RadioButton":"resource/eui_skins/RadioButtonSkin.exml","eui.Scroller":"resource/eui_skins/ScrollerSkin.exml","eui.ToggleSwitch":"resource/eui_skins/ToggleSwitchSkin.exml","eui.VScrollBar":"resource/eui_skins/VScrollBarSkin.exml","eui.VSlider":"resource/eui_skins/VSliderSkin.exml","eui.ItemRenderer":"resource/eui_skins/ItemRendererSkin.exml","StartPanel":"resource/eui_skins/StartPanelSkin.exml","MainUI":"resource/eui_skins/MainUISkin.exml","L1MainUI":"resource/eui_skins/L1MainUISkin.exml","L1MainStorySceneUI":"resource/eui_skins/L1MainStorySceneUISkin.exml","L1CharPortr":"resource/eui_skins/L1CharPortrSkin.exml"};generateEUI.paths['resource/eui_skins/ButtonSkin.exml'] = window.skins.ButtonSkin = (function (_super) {
 	__extends(ButtonSkin, _super);
 	function ButtonSkin() {
 		_super.call(this);
@@ -245,9 +245,125 @@ window.skins=window.skins||{};
 		return t;
 	};
 	return ItemRendererSkin;
-})(eui.Skin);generateEUI.paths['resource/eui_skins/L1MainUISkin.exml'] = window.L1MainUISkin = (function (_super) {
-	__extends(L1MainUISkin, _super);
-	function L1MainUISkin() {
+})(eui.Skin);generateEUI.paths['resource/eui_skins/L1CharPortrSkin.exml'] = window.L1CharPortrSkin = (function (_super) {
+	__extends(L1CharPortrSkin, _super);
+	function L1CharPortrSkin() {
+		_super.call(this);
+		this.skinParts = ["angerNumCircle","hpBg","hpNumCircle","portMask","portImage"];
+		
+		this.height = 100;
+		this.width = 100;
+		this.elementsContent = [this._Group1_i()];
+	}
+	var _proto = L1CharPortrSkin.prototype;
+
+	_proto._Group1_i = function () {
+		var t = new eui.Group();
+		t.height = 100;
+		t.horizontalCenter = -50;
+		t.verticalCenter = -50;
+		t.width = 100;
+		t.elementsContent = [this.angerNumCircle_i(),this.hpBg_i(),this.hpNumCircle_i(),this.portMask_i(),this.portImage_i()];
+		return t;
+	};
+	_proto.angerNumCircle_i = function () {
+		var t = new eui.Rect();
+		this.angerNumCircle = t;
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.ellipseHeight = 100;
+		t.ellipseWidth = 100;
+		t.fillColor = 0xFF8C00;
+		t.height = 100;
+		t.horizontalCenter = 0;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.strokeColor = 0xFF8C00;
+		t.touchEnabled = false;
+		t.verticalCenter = 0;
+		t.width = 100;
+		t.x = -67;
+		t.y = -74.99999999999999;
+		return t;
+	};
+	_proto.hpBg_i = function () {
+		var t = new eui.Rect();
+		this.hpBg = t;
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.ellipseHeight = 90;
+		t.ellipseWidth = 90;
+		t.fillColor = 0xFAEBD7;
+		t.height = 90;
+		t.horizontalCenter = 0;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.strokeColor = 0xFF8C00;
+		t.touchEnabled = false;
+		t.verticalCenter = 0;
+		t.width = 90;
+		t.x = -61.99999999999997;
+		t.y = -69.99999999999999;
+		return t;
+	};
+	_proto.hpNumCircle_i = function () {
+		var t = new eui.Rect();
+		this.hpNumCircle = t;
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.ellipseHeight = 90;
+		t.ellipseWidth = 90;
+		t.fillColor = 0x8B0000;
+		t.height = 90;
+		t.horizontalCenter = 0;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.touchEnabled = false;
+		t.verticalCenter = 0;
+		t.width = 90;
+		t.x = -61.99999999999997;
+		t.y = -69.99999999999999;
+		return t;
+	};
+	_proto.portMask_i = function () {
+		var t = new eui.Rect();
+		this.portMask = t;
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.ellipseHeight = 120;
+		t.ellipseWidth = 120;
+		t.fillColor = 0xB1B1B1;
+		t.height = 80;
+		t.horizontalCenter = 0;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.touchEnabled = false;
+		t.verticalCenter = 0;
+		t.width = 80;
+		t.x = -56.99999999999997;
+		t.y = -64.99999999999999;
+		return t;
+	};
+	_proto.portImage_i = function () {
+		var t = new eui.Image();
+		this.portImage = t;
+		t.fillMode = "scale";
+		t.height = 120;
+		t.horizontalCenter = 0;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.touchEnabled = false;
+		t.verticalCenter = 0;
+		t.visible = true;
+		t.width = 120;
+		t.x = -77;
+		t.y = -84.99999999999999;
+		return t;
+	};
+	return L1CharPortrSkin;
+})(eui.Skin);generateEUI.paths['resource/eui_skins/L1MainStorySceneUISkin.exml'] = window.L1MainStorySceneUISkin = (function (_super) {
+	__extends(L1MainStorySceneUISkin, _super);
+	function L1MainStorySceneUISkin() {
 		_super.call(this);
 		this.skinParts = ["backButton"];
 		
@@ -255,8 +371,79 @@ window.skins=window.skins||{};
 		this.width = 400;
 		this.elementsContent = [this.backButton_i()];
 	}
+	var _proto = L1MainStorySceneUISkin.prototype;
+
+	_proto.backButton_i = function () {
+		var t = new eui.Button();
+		this.backButton = t;
+		t.label = "返回";
+		t.left = 30;
+		t.top = 30;
+		return t;
+	};
+	return L1MainStorySceneUISkin;
+})(eui.Skin);generateEUI.paths['resource/eui_skins/L1MainUISkin.exml'] = window.L1MainUISkin = (function (_super) {
+	__extends(L1MainUISkin, _super);
+	function L1MainUISkin() {
+		_super.call(this);
+		this.skinParts = ["mainStoryButton","roughlikeButton","backButton"];
+		
+		this.height = 300;
+		this.width = 400;
+		this.elementsContent = [this._Group1_i(),this.backButton_i()];
+	}
 	var _proto = L1MainUISkin.prototype;
 
+	_proto._Group1_i = function () {
+		var t = new eui.Group();
+		t.percentHeight = 100;
+		t.percentWidth = 100;
+		t.x = 0;
+		t.y = 0;
+		t.layout = this._HorizontalLayout1_i();
+		t.elementsContent = [this.mainStoryButton_i(),this.roughlikeButton_i()];
+		return t;
+	};
+	_proto._HorizontalLayout1_i = function () {
+		var t = new eui.HorizontalLayout();
+		t.gap = 50;
+		t.horizontalAlign = "center";
+		t.paddingBottom = 100;
+		t.paddingLeft = 100;
+		t.paddingRight = 100;
+		t.paddingTop = 100;
+		t.verticalAlign = "top";
+		return t;
+	};
+	_proto.mainStoryButton_i = function () {
+		var t = new eui.Button();
+		this.mainStoryButton = t;
+		t.anchorOffsetY = 0;
+		t.height = 200;
+		t.label = "主线";
+		t.left = 80;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.top = 150;
+		t.width = 200;
+		t.x = 350;
+		t.y = 99.99999999999999;
+		return t;
+	};
+	_proto.roughlikeButton_i = function () {
+		var t = new eui.Button();
+		this.roughlikeButton = t;
+		t.height = 200;
+		t.label = "肉鸽";
+		t.left = 220;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.top = 150;
+		t.width = 200;
+		t.x = 219.99999999999997;
+		t.y = 150;
+		return t;
+	};
 	_proto.backButton_i = function () {
 		var t = new eui.Button();
 		this.backButton = t;
@@ -534,12 +721,12 @@ window.skins=window.skins||{};
 	__extends(StartPanelSkin, _super);
 	function StartPanelSkin() {
 		_super.call(this);
-		this.skinParts = ["labelAnim","pswdTextInput","confirmButton","label"];
+		this.skinParts = ["labelAnim","pswdTextInput","confirmButton","label","debugButton"];
 		
 		this.height = 300;
 		this.width = 400;
 		this.labelAnim_i();
-		this.elementsContent = [this.pswdTextInput_i(),this.confirmButton_i(),this.label_i()];
+		this.elementsContent = [this.pswdTextInput_i(),this.confirmButton_i(),this.label_i(),this.debugButton_i()];
 		
 		eui.Binding.$bindProperties(this, ["label"],[0],this._TweenItem1,"target");
 		eui.Binding.$bindProperties(this, [1],[],this._Object1,"alpha");
@@ -621,6 +808,16 @@ window.skins=window.skins||{};
 		t.text = "请输入密码";
 		t.textColor = 0xFF7F50;
 		t.verticalCenter = -181;
+		return t;
+	};
+	_proto.debugButton_i = function () {
+		var t = new eui.Button();
+		this.debugButton = t;
+		t.bottom = 0;
+		t.height = 200;
+		t.label = "测试button";
+		t.right = 0;
+		t.width = 200;
 		return t;
 	};
 	return StartPanelSkin;
