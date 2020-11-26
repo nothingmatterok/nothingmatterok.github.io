@@ -817,6 +817,7 @@ window.skins=window.skins||{};
 		t.height = 200;
 		t.label = "测试button";
 		t.right = 0;
+		t.visible = false;
 		t.width = 200;
 		return t;
 	};
