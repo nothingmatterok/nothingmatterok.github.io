@@ -249,14 +249,45 @@ window.skins=window.skins||{};
 	__extends(L1CharPortrSkin, _super);
 	function L1CharPortrSkin() {
 		_super.call(this);
-		this.skinParts = ["angerNumCircle","hpBg","hpNumCircle","portMask","portImage","contentGroup"];
+		this.skinParts = ["rotationCircle","angerNumCircle","hpBg","hpNumCircle","portMask","portImage","contentGroup"];
 		
 		this.height = 100;
 		this.width = 100;
-		this.elementsContent = [this.contentGroup_i()];
+		this.elementsContent = [this.rotationCircle_i(),this.contentGroup_i()];
 	}
 	var _proto = L1CharPortrSkin.prototype;
 
+	_proto.rotationCircle_i = function () {
+		var t = new eui.Group();
+		this.rotationCircle = t;
+		t.height = 50;
+		t.rotation = 0;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.touchEnabled = false;
+		t.width = 50;
+		t.x = 0;
+		t.y = 0;
+		t.elementsContent = [this._Rect1_i()];
+		return t;
+	};
+	_proto._Rect1_i = function () {
+		var t = new eui.Rect();
+		t.anchorOffsetX = 0;
+		t.anchorOffsetY = 0;
+		t.ellipseHeight = 8;
+		t.ellipseWidth = 8;
+		t.fillColor = 0xFF4500;
+		t.height = 8;
+		t.right = -6;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.strokeColor = 0xFF8C00;
+		t.top = -4;
+		t.touchEnabled = false;
+		t.width = 8;
+		return t;
+	};
 	_proto.contentGroup_i = function () {
 		var t = new eui.Group();
 		this.contentGroup = t;
