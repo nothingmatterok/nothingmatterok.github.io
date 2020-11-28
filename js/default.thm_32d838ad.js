@@ -249,20 +249,21 @@ window.skins=window.skins||{};
 	__extends(L1CharPortrSkin, _super);
 	function L1CharPortrSkin() {
 		_super.call(this);
-		this.skinParts = ["angerNumCircle","hpBg","hpNumCircle","portMask","portImage"];
+		this.skinParts = ["angerNumCircle","hpBg","hpNumCircle","portMask","portImage","contentGroup"];
 		
 		this.height = 100;
 		this.width = 100;
-		this.elementsContent = [this._Group1_i()];
+		this.elementsContent = [this.contentGroup_i()];
 	}
 	var _proto = L1CharPortrSkin.prototype;
 
-	_proto._Group1_i = function () {
+	_proto.contentGroup_i = function () {
 		var t = new eui.Group();
+		this.contentGroup = t;
 		t.height = 100;
-		t.horizontalCenter = -50;
-		t.verticalCenter = -50;
 		t.width = 100;
+		t.x = -50;
+		t.y = -50;
 		t.elementsContent = [this.angerNumCircle_i(),this.hpBg_i(),this.hpNumCircle_i(),this.portMask_i(),this.portImage_i()];
 		return t;
 	};
