@@ -249,7 +249,7 @@ window.skins=window.skins||{};
 	__extends(L1CharPortrSkin, _super);
 	function L1CharPortrSkin() {
 		_super.call(this);
-		this.skinParts = ["angerNumCircle","hpBg","hpNumCircle","portMask","portImage","rotationPoint","rotationCircle","contentGroup"];
+		this.skinParts = ["angerNumCircle","hpBg","hpNumCircle","portMask","portImage","rotationPoint","rotationCircle","dizzLabel","slientLabel","contentGroup"];
 		
 		this.height = 100;
 		this.width = 100;
@@ -275,7 +275,7 @@ window.skins=window.skins||{};
 		t.width = 100;
 		t.x = 0;
 		t.y = 0;
-		t.elementsContent = [this.angerNumCircle_i(),this.hpBg_i(),this.hpNumCircle_i(),this.portMask_i(),this.portImage_i(),this._Group1_i()];
+		t.elementsContent = [this.angerNumCircle_i(),this.hpBg_i(),this.hpNumCircle_i(),this.portMask_i(),this.portImage_i(),this._Group1_i(),this.dizzLabel_i(),this.slientLabel_i()];
 		return t;
 	};
 	_proto.angerNumCircle_i = function () {
@@ -402,6 +402,30 @@ window.skins=window.skins||{};
 		t.top = -4;
 		t.touchEnabled = false;
 		t.width = 8;
+		return t;
+	};
+	_proto.dizzLabel_i = function () {
+		var t = new eui.Label();
+		this.dizzLabel = t;
+		t.horizontalCenter = 0;
+		t.size = 20;
+		t.text = "眩晕";
+		t.textColor = 0xFF0000;
+		t.verticalCenter = -19;
+		t.visible = false;
+		return t;
+	};
+	_proto.slientLabel_i = function () {
+		var t = new eui.Label();
+		this.slientLabel = t;
+		t.horizontalCenter = 0;
+		t.size = 20;
+		t.text = "沉默";
+		t.textColor = 0xFF0000;
+		t.verticalCenter = 6;
+		t.visible = false;
+		t.x = 30;
+		t.y = 45;
 		return t;
 	};
 	return L1CharPortrSkin;
