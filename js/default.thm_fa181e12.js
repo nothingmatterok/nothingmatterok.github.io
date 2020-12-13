@@ -10,7 +10,7 @@ window.skins=window.skins||{};
                 window.generateEUI = window.generateEUI||{};
                 generateEUI.paths = generateEUI.paths||{};
                 generateEUI.styles = undefined;
-                generateEUI.skins = {"eui.Button":"resource/eui_skins/ButtonSkin.exml","eui.CheckBox":"resource/eui_skins/CheckBoxSkin.exml","eui.HScrollBar":"resource/eui_skins/HScrollBarSkin.exml","eui.HSlider":"resource/eui_skins/HSliderSkin.exml","eui.Panel":"resource/eui_skins/PanelSkin.exml","eui.TextInput":"resource/eui_skins/TextInputSkin.exml","eui.ProgressBar":"resource/eui_skins/ProgressBarSkin.exml","eui.RadioButton":"resource/eui_skins/RadioButtonSkin.exml","eui.Scroller":"resource/eui_skins/ScrollerSkin.exml","eui.ToggleSwitch":"resource/eui_skins/ToggleSwitchSkin.exml","eui.VScrollBar":"resource/eui_skins/VScrollBarSkin.exml","eui.VSlider":"resource/eui_skins/VSliderSkin.exml","eui.ItemRenderer":"resource/eui_skins/ItemRendererSkin.exml","StartPanel":"resource/eui_skins/StartPanelSkin.exml","MainUI":"resource/eui_skins/MainUISkin.exml","L1MainUI":"resource/eui_skins/L1MainUISkin.exml","L1BattleSceneUI":"resource/eui_skins/L1BattleSceneUISkin.exml","L1CharPortr":"resource/eui_skins/L1CharPortrSkin.exml"};generateEUI.paths['resource/eui_skins/ButtonSkin.exml'] = window.skins.ButtonSkin = (function (_super) {
+                generateEUI.skins = {"eui.Button":"resource/eui_skins/ButtonSkin.exml","eui.CheckBox":"resource/eui_skins/CheckBoxSkin.exml","eui.HScrollBar":"resource/eui_skins/HScrollBarSkin.exml","eui.HSlider":"resource/eui_skins/HSliderSkin.exml","eui.Panel":"resource/eui_skins/PanelSkin.exml","eui.TextInput":"resource/eui_skins/TextInputSkin.exml","eui.ProgressBar":"resource/eui_skins/ProgressBarSkin.exml","eui.RadioButton":"resource/eui_skins/RadioButtonSkin.exml","eui.Scroller":"resource/eui_skins/ScrollerSkin.exml","eui.ToggleSwitch":"resource/eui_skins/ToggleSwitchSkin.exml","eui.VScrollBar":"resource/eui_skins/VScrollBarSkin.exml","eui.VSlider":"resource/eui_skins/VSliderSkin.exml","eui.ItemRenderer":"resource/eui_skins/ItemRendererSkin.exml","StartPanel":"resource/eui_skins/StartPanelSkin.exml","MainUI":"resource/eui_skins/MainUISkin.exml","L1MainUI":"resource/eui_skins/L1/L1MainUISkin.exml","L1BattleSceneUI":"resource/eui_skins/L1/L1BattleSceneUISkin.exml","L1CharPortr":"resource/eui_skins/L1/L1CharPortrSkin.exml"};generateEUI.paths['resource/eui_skins/ButtonSkin.exml'] = window.skins.ButtonSkin = (function (_super) {
 	__extends(ButtonSkin, _super);
 	function ButtonSkin() {
 		_super.call(this);
@@ -245,15 +245,15 @@ window.skins=window.skins||{};
 		return t;
 	};
 	return ItemRendererSkin;
-})(eui.Skin);generateEUI.paths['resource/eui_skins/L1BattleSceneUISkin.exml'] = window.L1BattleSceneUISkin = (function (_super) {
+})(eui.Skin);generateEUI.paths['resource/eui_skins/L1/L1BattleSceneUISkin.exml'] = window.L1BattleSceneUISkin = (function (_super) {
 	__extends(L1BattleSceneUISkin, _super);
 	function L1BattleSceneUISkin() {
 		_super.call(this);
-		this.skinParts = ["backButton","battleStartButton"];
+		this.skinParts = ["backButton","battleStartButton","portImageGroup","portScroller"];
 		
 		this.height = 1136;
 		this.width = 640;
-		this.elementsContent = [this.backButton_i(),this.battleStartButton_i()];
+		this.elementsContent = [this.backButton_i(),this.battleStartButton_i(),this.portScroller_i()];
 	}
 	var _proto = L1BattleSceneUISkin.prototype;
 
@@ -268,14 +268,32 @@ window.skins=window.skins||{};
 	_proto.battleStartButton_i = function () {
 		var t = new eui.Button();
 		this.battleStartButton = t;
-		t.bottom = 50;
+		t.bottom = 173;
 		t.height = 100;
 		t.label = "开始战斗";
-		t.right = 50;
+		t.right = 19;
+		return t;
+	};
+	_proto.portScroller_i = function () {
+		var t = new eui.Scroller();
+		this.portScroller = t;
+		t.anchorOffsetY = 0;
+		t.bottom = 0;
+		t.height = 140;
+		t.left = 0;
+		t.percentWidth = 100;
+		t.viewport = this.portImageGroup_i();
+		return t;
+	};
+	_proto.portImageGroup_i = function () {
+		var t = new eui.Group();
+		this.portImageGroup = t;
+		t.verticalCenter = 0;
+		t.percentWidth = 100;
 		return t;
 	};
 	return L1BattleSceneUISkin;
-})(eui.Skin);generateEUI.paths['resource/eui_skins/L1CharPortrSkin.exml'] = window.L1CharPortrSkin = (function (_super) {
+})(eui.Skin);generateEUI.paths['resource/eui_skins/L1/L1CharPortrSkin.exml'] = window.L1CharPortrSkin = (function (_super) {
 	__extends(L1CharPortrSkin, _super);
 	function L1CharPortrSkin() {
 		_super.call(this);
@@ -459,7 +477,7 @@ window.skins=window.skins||{};
 		return t;
 	};
 	return L1CharPortrSkin;
-})(eui.Skin);generateEUI.paths['resource/eui_skins/L1MainUISkin.exml'] = window.L1MainUISkin = (function (_super) {
+})(eui.Skin);generateEUI.paths['resource/eui_skins/L1/L1MainUISkin.exml'] = window.L1MainUISkin = (function (_super) {
 	__extends(L1MainUISkin, _super);
 	function L1MainUISkin() {
 		_super.call(this);
