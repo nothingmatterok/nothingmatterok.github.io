@@ -249,11 +249,11 @@ window.skins=window.skins||{};
 	__extends(L1BattleSceneUISkin, _super);
 	function L1BattleSceneUISkin() {
 		_super.call(this);
-		this.skinParts = ["backButton","battleStartButton","portImageGroup","portScroller"];
+		this.skinParts = ["backButton","battleStartButton","nextLevelButton","portImageGroup","portScroller"];
 		
 		this.height = 1136;
 		this.width = 640;
-		this.elementsContent = [this.backButton_i(),this.battleStartButton_i(),this.portScroller_i()];
+		this.elementsContent = [this.backButton_i(),this.battleStartButton_i(),this.nextLevelButton_i(),this.portScroller_i()];
 	}
 	var _proto = L1BattleSceneUISkin.prototype;
 
@@ -272,6 +272,18 @@ window.skins=window.skins||{};
 		t.height = 100;
 		t.label = "开始战斗";
 		t.right = 19;
+		return t;
+	};
+	_proto.nextLevelButton_i = function () {
+		var t = new eui.Button();
+		this.nextLevelButton = t;
+		t.bottom = 173;
+		t.height = 100;
+		t.label = "Next";
+		t.right = 19;
+		t.visible = false;
+		t.x = 531;
+		t.y = 873;
 		return t;
 	};
 	_proto.portScroller_i = function () {
