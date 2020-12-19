@@ -1172,7 +1172,7 @@ window.skins=window.skins||{};
 	__extends(L1TouchLabelSkin, _super);
 	function L1TouchLabelSkin() {
 		_super.call(this);
-		this.skinParts = ["cdRect","nameLabel"];
+		this.skinParts = ["cdRect","nameLabel","buffTierLabel","skillPreStateLabel","skillCDLabel"];
 		
 		this.height = 100;
 		this.width = 200;
@@ -1184,7 +1184,7 @@ window.skins=window.skins||{};
 		var t = new eui.Group();
 		t.percentHeight = 100;
 		t.percentWidth = 100;
-		t.elementsContent = [this._Rect1_i(),this.cdRect_i(),this.nameLabel_i()];
+		t.elementsContent = [this._Rect1_i(),this.cdRect_i(),this.nameLabel_i(),this.buffTierLabel_i(),this.skillPreStateLabel_i(),this.skillCDLabel_i()];
 		return t;
 	};
 	_proto._Rect1_i = function () {
@@ -1225,6 +1225,40 @@ window.skins=window.skins||{};
 		t.text = "Label";
 		t.textColor = 0xFFFFFF;
 		t.verticalCenter = 0;
+		return t;
+	};
+	_proto.buffTierLabel_i = function () {
+		var t = new eui.Label();
+		this.buffTierLabel = t;
+		t.bottom = 5;
+		t.right = 5;
+		t.size = 20;
+		t.text = "x3";
+		t.visible = false;
+		return t;
+	};
+	_proto.skillPreStateLabel_i = function () {
+		var t = new eui.Label();
+		this.skillPreStateLabel = t;
+		t.bold = true;
+		t.horizontalCenter = 0;
+		t.size = 20;
+		t.text = "等待释放";
+		t.textColor = 0x8B0000;
+		t.top = 5;
+		t.visible = false;
+		return t;
+	};
+	_proto.skillCDLabel_i = function () {
+		var t = new eui.Label();
+		this.skillCDLabel = t;
+		t.bottom = 5;
+		t.height = 20;
+		t.horizontalCenter = 0;
+		t.size = 20;
+		t.text = "xx/10s";
+		t.visible = false;
+		t.x = 70;
 		return t;
 	};
 	return L1TouchLabelSkin;
