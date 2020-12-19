@@ -327,11 +327,11 @@ window.skins=window.skins||{};
 	__extends(L1CharBattleInfoSkin, _super);
 	function L1CharBattleInfoSkin() {
 		_super.call(this);
-		this.skinParts = ["bgRect","charNameLabel","atkNumLabel","defNumLabel","critPLabel","critRLabel","dodgeLabel","rangeLabel","buffScrollerGroup","buffScroller","skillScrollerGroup","skillScroller","hpRateRect","maxHpLabel"];
+		this.skinParts = ["bgRect","charNameLabel","atkNumLabel","defNumLabel","critPLabel","critRLabel","dodgeLabel","rangeLabel","buffScrollerGroup","buffScroller","skillScrollerGroup","skillScroller","hpRateRect","angerRateRect","maxHpLabel","descrLabel","descrGroup"];
 		
 		this.height = 800;
 		this.width = 500;
-		this.elementsContent = [this.bgRect_i(),this._Group14_i()];
+		this.elementsContent = [this.bgRect_i(),this._Group14_i(),this.descrGroup_i()];
 	}
 	var _proto = L1CharBattleInfoSkin.prototype;
 
@@ -353,7 +353,7 @@ window.skins=window.skins||{};
 		t.horizontalCenter = 0;
 		t.top = 100;
 		t.width = 400;
-		t.elementsContent = [this._Rect1_i(),this._Rect2_i(),this._Rect3_i(),this._Label1_i(),this._Label2_i(),this._Group1_i(),this._Group2_i(),this._Group3_i(),this._Group4_i(),this._Group5_i(),this._Group6_i(),this._Group7_i(),this._Group8_i(),this._Group9_i(),this._Group10_i(),this._Group11_i(),this._Group12_i(),this._Group13_i(),this.buffScroller_i(),this.skillScroller_i(),this.hpRateRect_i(),this.maxHpLabel_i()];
+		t.elementsContent = [this._Rect1_i(),this._Rect2_i(),this._Rect3_i(),this._Label1_i(),this._Label2_i(),this._Group1_i(),this._Group2_i(),this._Group3_i(),this._Group4_i(),this._Group5_i(),this._Group6_i(),this._Group7_i(),this._Group8_i(),this._Group9_i(),this._Group10_i(),this._Group11_i(),this._Group12_i(),this._Group13_i(),this.buffScroller_i(),this.skillScroller_i(),this.hpRateRect_i(),this.angerRateRect_i(),this.maxHpLabel_i()];
 		return t;
 	};
 	_proto._Rect1_i = function () {
@@ -903,6 +903,16 @@ window.skins=window.skins||{};
 		t.y = 60;
 		return t;
 	};
+	_proto.angerRateRect_i = function () {
+		var t = new eui.Rect();
+		this.angerRateRect = t;
+		t.bottom = 0;
+		t.fillColor = 0xFF8C00;
+		t.height = 5;
+		t.percentWidth = 0;
+		t.x = 0;
+		return t;
+	};
 	_proto.maxHpLabel_i = function () {
 		var t = new eui.Label();
 		this.maxHpLabel = t;
@@ -910,6 +920,36 @@ window.skins=window.skins||{};
 		t.size = 25;
 		t.text = "2000";
 		t.y = 36;
+		return t;
+	};
+	_proto.descrGroup_i = function () {
+		var t = new eui.Group();
+		this.descrGroup = t;
+		t.height = 100;
+		t.horizontalCenter = 0;
+		t.visible = false;
+		t.width = 400;
+		t.y = 660;
+		t.elementsContent = [this._Rect17_i(),this.descrLabel_i()];
+		return t;
+	};
+	_proto._Rect17_i = function () {
+		var t = new eui.Rect();
+		t.fillAlpha = 0.5;
+		t.percentHeight = 100;
+		t.percentWidth = 100;
+		t.x = 0;
+		t.y = 0;
+		return t;
+	};
+	_proto.descrLabel_i = function () {
+		var t = new eui.Label();
+		this.descrLabel = t;
+		t.left = 10;
+		t.right = 10;
+		t.size = 20;
+		t.text = "Label";
+		t.top = 5;
 		return t;
 	};
 	return L1CharBattleInfoSkin;
@@ -1204,8 +1244,8 @@ window.skins=window.skins||{};
 		var t = new eui.Rect();
 		this.cdRect = t;
 		t.bottom = 0;
-		t.ellipseHeight = 0;
-		t.ellipseWidth = 0;
+		t.ellipseHeight = 30;
+		t.ellipseWidth = 30;
 		t.fillAlpha = 0.5;
 		t.fillColor = 0x696969;
 		t.percentHeight = 100;
