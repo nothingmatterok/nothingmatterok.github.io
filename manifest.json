@@ -1,14 +1,14 @@
 {
 	"initial": [
-		"js/egret.min_836d668b.js",
-		"js/egret.web.min_d1451e99.js",
-		"js/eui.min_493403ce.js",
-		"js/assetsmanager.min_2ef412b7.js",
+		"js/egret.min_3a39dfa6.js",
+		"js/egret.web.min_d2f51c7d.js",
+		"js/eui.min_7b291ad4.js",
+		"js/assetsmanager.min_b2ca4c97.js",
 		"js/tween.min_6c5a88f9.js",
 		"js/promise.min_83a6a5d.js"
 	],
 	"game": [
-		"js/default.thm_30ebe4a0.js",
-		"js/main.min_118f11d7.js"
+		"js/default.thm_7ac1bb59.js",
+		"js/main.min_1b508800.js"
 	]
 }
