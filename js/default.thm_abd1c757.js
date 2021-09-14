@@ -1306,11 +1306,11 @@ window.skins=window.skins||{};
 	__extends(L2MainUISkin, _super);
 	function L2MainUISkin() {
 		_super.call(this);
-		this.skinParts = ["backButton"];
+		this.skinParts = ["backButton","timePointLabel","roundLabel","timeBarGroup","selectBarGroup","energyBarGroup"];
 		
 		this.height = 300;
 		this.width = 400;
-		this.elementsContent = [this.backButton_i()];
+		this.elementsContent = [this.backButton_i(),this._Label1_i(),this.timePointLabel_i(),this._Label2_i(),this.roundLabel_i(),this._Label3_i(),this.timeBarGroup_i(),this.selectBarGroup_i(),this.energyBarGroup_i()];
 	}
 	var _proto = L2MainUISkin.prototype;
 
@@ -1320,6 +1320,137 @@ window.skins=window.skins||{};
 		t.label = "返回";
 		t.left = 30;
 		t.top = 30;
+		return t;
+	};
+	_proto._Label1_i = function () {
+		var t = new eui.Label();
+		t.left = 160;
+		t.text = "时点：";
+		t.top = 40;
+		return t;
+	};
+	_proto.timePointLabel_i = function () {
+		var t = new eui.Label();
+		this.timePointLabel = t;
+		t.left = 250;
+		t.text = "时点";
+		t.top = 40;
+		return t;
+	};
+	_proto._Label2_i = function () {
+		var t = new eui.Label();
+		t.right = 120;
+		t.text = "回合";
+		t.top = 40;
+		t.x = 340;
+		return t;
+	};
+	_proto.roundLabel_i = function () {
+		var t = new eui.Label();
+		this.roundLabel = t;
+		t.right = 85;
+		t.text = "5";
+		t.top = 40;
+		return t;
+	};
+	_proto._Label3_i = function () {
+		var t = new eui.Label();
+		t.right = 10;
+		t.text = "回合";
+		t.y = 40;
+		return t;
+	};
+	_proto.timeBarGroup_i = function () {
+		var t = new eui.Group();
+		this.timeBarGroup = t;
+		t.height = 10;
+		t.left = 40;
+		t.right = 40;
+		t.top = 110;
+		t.elementsContent = [this._Rect1_i(),this._Label4_i(),this._Label5_i(),this._Label6_i()];
+		return t;
+	};
+	_proto._Rect1_i = function () {
+		var t = new eui.Rect();
+		t.height = 2;
+		t.left = 0;
+		t.right = 0;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.top = -5;
+		t.x = 0;
+		t.y = 0;
+		return t;
+	};
+	_proto._Label4_i = function () {
+		var t = new eui.Label();
+		t.right = -10;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.size = 15;
+		t.text = "100";
+		t.top = -20;
+		t.x = 339;
+		t.y = -15;
+		return t;
+	};
+	_proto._Label5_i = function () {
+		var t = new eui.Label();
+		t.left = -5;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.size = 15;
+		t.text = "0";
+		t.top = -20;
+		t.width = 9;
+		t.x = -15;
+		t.y = -15;
+		return t;
+	};
+	_proto._Label6_i = function () {
+		var t = new eui.Label();
+		t.horizontalCenter = 0;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.size = 15;
+		t.text = "50";
+		t.top = -20;
+		t.width = 18;
+		t.x = 161;
+		t.y = -15;
+		return t;
+	};
+	_proto.selectBarGroup_i = function () {
+		var t = new eui.Group();
+		this.selectBarGroup = t;
+		t.height = 10;
+		t.left = 40;
+		t.right = 40;
+		t.top = 100;
+		t.x = 50;
+		t.y = 120;
+		return t;
+	};
+	_proto.energyBarGroup_i = function () {
+		var t = new eui.Group();
+		this.energyBarGroup = t;
+		t.height = 2;
+		t.left = 100;
+		t.right = 30;
+		t.top = 180;
+		t.elementsContent = [this._Label7_i()];
+		return t;
+	};
+	_proto._Label7_i = function () {
+		var t = new eui.Label();
+		t.left = -60;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.size = 18;
+		t.text = "能量：";
+		t.verticalCenter = 0;
+		t.width = 80;
+		t.x = -25;
 		return t;
 	};
 	return L2MainUISkin;
