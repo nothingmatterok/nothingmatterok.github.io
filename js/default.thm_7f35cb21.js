@@ -1306,11 +1306,11 @@ window.skins=window.skins||{};
 	__extends(L2MainUISkin, _super);
 	function L2MainUISkin() {
 		_super.call(this);
-		this.skinParts = ["backButton","timePointLabel","roundLabel","timeBarGroup","selectBarGroup","energyBarGroup"];
+		this.skinParts = ["backButton","continueButton","timePointLabel","roundLabel","timeBarGroup","selectBarGroup","energyBarGroup"];
 		
 		this.height = 300;
 		this.width = 400;
-		this.elementsContent = [this.backButton_i(),this._Label1_i(),this.timePointLabel_i(),this._Label2_i(),this.roundLabel_i(),this._Label3_i(),this.timeBarGroup_i(),this.selectBarGroup_i(),this.energyBarGroup_i()];
+		this.elementsContent = [this.backButton_i(),this.continueButton_i(),this._Label1_i(),this.timePointLabel_i(),this._Label2_i(),this.roundLabel_i(),this._Label3_i(),this.timeBarGroup_i(),this.selectBarGroup_i(),this.energyBarGroup_i()];
 	}
 	var _proto = L2MainUISkin.prototype;
 
@@ -1320,6 +1320,15 @@ window.skins=window.skins||{};
 		t.label = "返回";
 		t.left = 30;
 		t.top = 30;
+		return t;
+	};
+	_proto.continueButton_i = function () {
+		var t = new eui.Button();
+		this.continueButton = t;
+		t.label = "继续";
+		t.right = 200;
+		t.visible = false;
+		t.y = 30;
 		return t;
 	};
 	_proto._Label1_i = function () {
@@ -1340,7 +1349,7 @@ window.skins=window.skins||{};
 	_proto._Label2_i = function () {
 		var t = new eui.Label();
 		t.right = 120;
-		t.text = "回合";
+		t.text = "第";
 		t.top = 40;
 		t.x = 340;
 		return t;
