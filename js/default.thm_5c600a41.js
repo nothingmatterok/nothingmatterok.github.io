@@ -1933,14 +1933,27 @@ window.skins=window.skins||{};
 	__extends(L2MainUISkin, _super);
 	function L2MainUISkin() {
 		_super.call(this);
-		this.skinParts = ["backButton","timePointLabel","roundLabel","timeBarGroup","selectBarGroup","energyBarGroup","skill1Button","skill2Button","waitButton","skillGroup","showInfoImage","commandButton"];
+		this.skinParts = ["commandModeLabel","backButton","timePointLabel","roundLabel","timeBarGroup","selectBarGroup","energyBarGroup","skill1Button","skill2Button","waitButton","skillGroup","showInfoImage","commandButton"];
 		
 		this.height = 300;
 		this.width = 400;
-		this.elementsContent = [this.backButton_i(),this._Label1_i(),this.timePointLabel_i(),this._Label2_i(),this.roundLabel_i(),this._Label3_i(),this.timeBarGroup_i(),this.selectBarGroup_i(),this.energyBarGroup_i(),this.skillGroup_i(),this.showInfoImage_i(),this.commandButton_i()];
+		this.elementsContent = [this.commandModeLabel_i(),this.backButton_i(),this._Label1_i(),this.timePointLabel_i(),this._Label2_i(),this.roundLabel_i(),this._Label3_i(),this.timeBarGroup_i(),this.selectBarGroup_i(),this.energyBarGroup_i(),this.skillGroup_i(),this.showInfoImage_i(),this.commandButton_i()];
 	}
 	var _proto = L2MainUISkin.prototype;
 
+	_proto.commandModeLabel_i = function () {
+		var t = new eui.Label();
+		this.commandModeLabel = t;
+		t.alpha = 0.7;
+		t.bottom = 5;
+		t.horizontalCenter = 0;
+		t.size = 60;
+		t.text = "命令模式中";
+		t.textColor = 0xFF8C00;
+		t.touchEnabled = true;
+		t.visible = true;
+		return t;
+	};
 	_proto.backButton_i = function () {
 		var t = new eui.Button();
 		this.backButton = t;
