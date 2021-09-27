@@ -1933,11 +1933,11 @@ window.skins=window.skins||{};
 	__extends(L2MainUISkin, _super);
 	function L2MainUISkin() {
 		_super.call(this);
-		this.skinParts = ["commandModeLabel","backButton","timePointLabel","roundLabel","timeBarGroup","selectBarGroup","energyBarGroup","skill1Button","skill2Button","waitButton","skillGroup","showInfoImage","commandButton"];
+		this.skinParts = ["commandModeLabel","skillInfoLabel","backButton","timePointLabel","roundLabel","timeBarGroup","selectBarGroup","energyBarGroup","skill1Button","skill2Button","moveButton","showInfoImage","confirmButton","disConfirmButton","commandButton"];
 		
 		this.height = 300;
 		this.width = 400;
-		this.elementsContent = [this.commandModeLabel_i(),this.backButton_i(),this._Label1_i(),this.timePointLabel_i(),this._Label2_i(),this.roundLabel_i(),this._Label3_i(),this.timeBarGroup_i(),this.selectBarGroup_i(),this.energyBarGroup_i(),this.skillGroup_i(),this.showInfoImage_i(),this.commandButton_i()];
+		this.elementsContent = [this.commandModeLabel_i(),this.skillInfoLabel_i(),this.backButton_i(),this._Label1_i(),this.timePointLabel_i(),this._Label2_i(),this.roundLabel_i(),this._Label3_i(),this.timeBarGroup_i(),this.selectBarGroup_i(),this.energyBarGroup_i(),this.skill1Button_i(),this.skill2Button_i(),this.moveButton_i(),this.showInfoImage_i(),this.confirmButton_i(),this.disConfirmButton_i(),this.commandButton_i()];
 	}
 	var _proto = L2MainUISkin.prototype;
 
@@ -1949,6 +1949,18 @@ window.skins=window.skins||{};
 		t.horizontalCenter = 0;
 		t.size = 60;
 		t.text = "命令模式中";
+		t.textColor = 0xFF8C00;
+		t.touchEnabled = true;
+		t.visible = true;
+		return t;
+	};
+	_proto.skillInfoLabel_i = function () {
+		var t = new eui.Label();
+		this.skillInfoLabel = t;
+		t.alpha = 0.7;
+		t.bottom = 60;
+		t.horizontalCenter = 0;
+		t.text = "选择什么";
 		t.textColor = 0xFF8C00;
 		t.touchEnabled = true;
 		t.visible = true;
@@ -1982,6 +1994,7 @@ window.skins=window.skins||{};
 		t.right = 120;
 		t.text = "第";
 		t.top = 40;
+		t.visible = true;
 		t.x = 340;
 		return t;
 	};
@@ -1997,6 +2010,7 @@ window.skins=window.skins||{};
 		var t = new eui.Label();
 		t.right = 10;
 		t.text = "回合";
+		t.visible = true;
 		t.y = 40;
 		return t;
 	};
@@ -2093,17 +2107,6 @@ window.skins=window.skins||{};
 		t.x = -25;
 		return t;
 	};
-	_proto.skillGroup_i = function () {
-		var t = new eui.Group();
-		this.skillGroup = t;
-		t.bottom = 0;
-		t.height = 200;
-		t.left = 0;
-		t.right = 0;
-		t.visible = false;
-		t.elementsContent = [this.skill1Button_i(),this.skill2Button_i(),this.waitButton_i()];
-		return t;
-	};
 	_proto.skill1Button_i = function () {
 		var t = new eui.Button();
 		this.skill1Button = t;
@@ -2126,9 +2129,9 @@ window.skins=window.skins||{};
 		t.y = 31;
 		return t;
 	};
-	_proto.waitButton_i = function () {
+	_proto.moveButton_i = function () {
 		var t = new eui.Button();
-		this.waitButton = t;
+		this.moveButton = t;
 		t.bottom = 10;
 		t.label = "移动";
 		t.left = 420;
@@ -2146,12 +2149,38 @@ window.skins=window.skins||{};
 		t.width = 100;
 		return t;
 	};
+	_proto.confirmButton_i = function () {
+		var t = new eui.Button();
+		this.confirmButton = t;
+		t.bottom = 10;
+		t.label = "确认";
+		t.right = 10;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.width = 100;
+		t.y = 51;
+		return t;
+	};
+	_proto.disConfirmButton_i = function () {
+		var t = new eui.Button();
+		this.disConfirmButton = t;
+		t.bottom = 10;
+		t.label = "取消";
+		t.right = 120;
+		t.scaleX = 1;
+		t.scaleY = 1;
+		t.width = 100;
+		t.x = 300;
+		t.y = 61;
+		return t;
+	};
 	_proto.commandButton_i = function () {
 		var t = new eui.Button();
 		this.commandButton = t;
 		t.bottom = 10;
 		t.label = "指令模式";
 		t.right = 10;
+		t.visible = true;
 		return t;
 	};
 	return L2MainUISkin;
