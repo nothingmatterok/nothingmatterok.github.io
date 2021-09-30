@@ -1933,11 +1933,11 @@ window.skins=window.skins||{};
 	__extends(L2MainUISkin, _super);
 	function L2MainUISkin() {
 		_super.call(this);
-		this.skinParts = ["commandModeLabel","skillInfoLabel","backButton","timePointLabel","roundLabel","timeBarGroup","selectBarGroup","energyBarGroup","skill1Button","skill2Button","moveButton","showInfoImage","confirmButton","disConfirmButton","commandButton"];
+		this.skinParts = ["commandModeLabel","skillInfoLabel","backButton","timePointLabel","roundLabel","timeBarGroup","selectBarGroup","energyBarGroup","skill1Button","skill2Button","moveButton","showInfoImage","confirmButton","disConfirmButton","commandButton","gameEndLabel","gameEndButton","gameEndGroup"];
 		
 		this.height = 300;
 		this.width = 400;
-		this.elementsContent = [this.commandModeLabel_i(),this.skillInfoLabel_i(),this.backButton_i(),this._Label1_i(),this.timePointLabel_i(),this._Label2_i(),this.roundLabel_i(),this._Label3_i(),this.timeBarGroup_i(),this.selectBarGroup_i(),this.energyBarGroup_i(),this.skill1Button_i(),this.skill2Button_i(),this.moveButton_i(),this.showInfoImage_i(),this.confirmButton_i(),this.disConfirmButton_i(),this.commandButton_i()];
+		this.elementsContent = [this.commandModeLabel_i(),this.skillInfoLabel_i(),this.backButton_i(),this._Label1_i(),this.timePointLabel_i(),this._Label2_i(),this.roundLabel_i(),this._Label3_i(),this.timeBarGroup_i(),this.selectBarGroup_i(),this.energyBarGroup_i(),this.skill1Button_i(),this.skill2Button_i(),this.moveButton_i(),this.showInfoImage_i(),this.confirmButton_i(),this.disConfirmButton_i(),this.commandButton_i(),this.gameEndGroup_i()];
 	}
 	var _proto = L2MainUISkin.prototype;
 
@@ -2184,6 +2184,34 @@ window.skins=window.skins||{};
 		t.label = "指令模式";
 		t.right = 10;
 		t.visible = true;
+		return t;
+	};
+	_proto.gameEndGroup_i = function () {
+		var t = new eui.Group();
+		this.gameEndGroup = t;
+		t.percentHeight = 100;
+		t.visible = false;
+		t.percentWidth = 100;
+		t.x = 0;
+		t.y = 0;
+		t.elementsContent = [this.gameEndLabel_i(),this.gameEndButton_i()];
+		return t;
+	};
+	_proto.gameEndLabel_i = function () {
+		var t = new eui.Label();
+		this.gameEndLabel = t;
+		t.horizontalCenter = 0;
+		t.size = 50;
+		t.text = "Label";
+		t.verticalCenter = 0;
+		return t;
+	};
+	_proto.gameEndButton_i = function () {
+		var t = new eui.Button();
+		this.gameEndButton = t;
+		t.horizontalCenter = 100;
+		t.label = "Button";
+		t.verticalCenter = 100;
 		return t;
 	};
 	return L2MainUISkin;
