@@ -1,34 +1,70 @@
-<html>
-<head>
-    <style>
-        /* 你可以在这里修改网页的样式 */
-        body {
-            background-color: lightblue;
-        }
-
-        h1 {
-            color: white;
-            text-align: center;
-        }
-
-        button {
-            display: block;
-            margin: 20px auto; /* 我增加了按钮的外边距，让它们有一些间隔 */
-            width: 200px;
-            height: 50px;
-            font-size: 20px;
-            border-radius: 10px;
-            background-color: green; /* 我改变了按钮的背景颜色，让它们更醒目 */
-            color: white; /* 我改变了按钮的文本颜色，让它们更清晰 */
-        }
-    </style>
-</head>
-<body>
-    <h1>各种小玩意</h1>
-    <button onclick="window.location.href='demos/'">游戏demo</button>
-    
-    <button onclick="window.location.href='demo/'">战棋demo</button>
-	
-	<button onclick="window.location.href='cilihangjian/'">词里行间（三消）</button>
-</body>
+<!DOCTYPE html>  
+<html>  
+<head>  
+    <style>  
+        body {  
+            margin: 0;  
+            padding: 0;  
+            font-family: Arial, sans-serif;  
+        }  
+  
+        .container {  
+            display: flex;  
+            flex-direction: column;  
+            align-items: center;  
+            justify-content: center;  
+            min-height: 100vh;  
+            background-color: #E0F2F7; /* 淡蓝色背景 */  
+            overflow: hidden;  
+        }  
+  
+        h1 {  
+            color: #006994; /* 深蓝色标题 */  
+            text-align: center;  
+            margin-bottom: 50px;  
+            animation: fadein 2s;  
+        }  
+  
+        button {  
+            margin: 10px;  
+            padding: 15px 20px;  
+            font-size: 20px;  
+            border-radius: 10px;  
+            background-color: #4CAF50; /* 鲜绿色按钮背景 */  
+            color: #FFFFFF; /* 白色按钮文本 */  
+            border: none;  
+            cursor: pointer;  
+            animation: fadein 2s;  
+            transition: transform 0.3s ease-in-out;  
+        }  
+  
+        button:hover {  
+            background-color: #81C784; /* 亮绿色悬停背景 */  
+            transform: scale(1.1);  
+        }  
+  
+        @media only screen and (max-width: 600px) {  
+            h1 {  
+                font-size: 24px;  
+            }  
+            button {  
+                font-size: 16px;  
+                padding: 10px 15px;  
+            }  
+        }  
+  
+        @keyframes fadein {  
+            from { opacity: 0; }  
+            to   { opacity: 1; }  
+        }  
+    </style>  
+</head>  
+<body>  
+    <div class="container">  
+        <h1>各种小玩意</h1>  
+        <button onclick="window.location.href='demos/'">游戏demo</button>  
+        <button onclick="window.location.href='demo/'">战棋demo</button>  
+        <button onclick="window.location.href='cilihangjian/'">词里行间（三消）</button>  
+    </div>  
+</body>  
 </html>
