@@ -1,6 +1,7 @@
 <!DOCTYPE html>  
 <html>  
 <head>  
+	<meta charset="UTF-8">
     <style>  
         body {  
             margin: 0;  
@@ -14,24 +15,25 @@
             align-items: center;  
             justify-content: center;  
             min-height: 100vh;  
-            background-color: #E0F2F7; /* 淡蓝色背景 */  
+            background-color: #E0F2F7;
             overflow: hidden;  
         }  
   
         h1 {  
-            color: #006994; /* 深蓝色标题 */  
+            color: #006994;
             text-align: center;  
-            margin-bottom: 50px;  
+            margin: 10vh 0;
+            font-size: 6vh;  
             animation: fadein 2s;  
         }  
   
         button {  
-            margin: 10px;  
-            padding: 15px 20px;  
-            font-size: 20px;  
+            margin: 3vh; /* Adjusted margin for better spacing */
+            padding: 4vh 6vh; /* Adjusted padding for smaller buttons */
+            font-size: 3.5vh; /* Adjusted font size for buttons */
             border-radius: 10px;  
-            background-color: #4CAF50; /* 鲜绿色按钮背景 */  
-            color: #FFFFFF; /* 白色按钮文本 */  
+            background-color: #4CAF50;  
+            color: #FFFFFF;  
             border: none;  
             cursor: pointer;  
             animation: fadein 2s;  
@@ -39,29 +41,35 @@
         }  
   
         button:hover {  
-            background-color: #81C784; /* 亮绿色悬停背景 */  
+            background-color: #81C784;  
             transform: scale(1.1);  
         }  
   
         @media only screen and (max-width: 600px) {  
+            .container {
+                flex-direction: row;
+                align-items: flex-start;
+            }
             h1 {  
-                font-size: 24px;  
+                font-size: 5vh;
+                margin: 5vh 0; 
             }  
             button {  
-                font-size: 16px;  
-                padding: 10px 15px;  
+                font-size: 3vh; /* Adjusted font size for smaller screens */
+                padding: 3.5vh 5vh; /* Adjusted padding for smaller screens */
+                margin: 0 2vh; /* Adjusted margin for better spacing between buttons on smaller screens */
             }  
         }  
   
         @keyframes fadein {  
             from { opacity: 0; }  
-            to   { opacity: 1; }  
+            to { opacity: 1; }  
         }  
     </style>  
 </head>  
 <body>  
-    <div class="container">  
-        <h1>各种小玩意</h1>  
+    <div class="container">   
+		<h1>各种小玩意</h1> 
         <button onclick="window.location.href='demos/'">游戏demo</button>  
         <button onclick="window.location.href='demo/'">战棋demo</button>  
         <button onclick="window.location.href='cilihangjian/'">词里行间（三消）</button>  
